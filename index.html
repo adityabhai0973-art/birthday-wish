@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday didi ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff4d6d,#ff8fab,#ffc2d1);
+overflow:hidden;
+}
+
+.card{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:20px;
+text-align:center;
+color:white;
+max-width:420px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+h1{
+font-size:36px;
+margin-bottom:15px;
+}
+
+p{
+font-size:18px;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+button{
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff2d55;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.heart{
+position:absolute;
+bottom:-20px;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-110vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>🎂 Happy Birthday Mansi ❤️</h1>
+
+<p>
+Wishing you a day filled with happiness, beautiful smiles, and unforgettable moments. 🌸<br><br>
+May every dream you have come true, and may you always stay happy, healthy, and blessed. ✨<br><br>
+🎉 Happy Birthday, Madam Ji! ❤️
+</p>
+
+<button onclick="wish()">Open Wish ❤️</button>
+</div>
+
+<script>
+function wish(){
+alert("❤️ Happy Birthday Didi! ❤️\n\nMay your smile always shine,\nMay your dreams always come true,\nStay happy and keep smiling forever. 🎂✨");
+}
+
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(4+Math.random()*3)+"s";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),7000);
+},300);
+</script>
+
+</body>
+</html>

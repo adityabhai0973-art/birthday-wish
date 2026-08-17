@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Mansi Didi ❤️</title>
+<title>Happy Birthday Mansi Didi 🎂</title>
 
 <style>
 *{
@@ -17,8 +17,8 @@ html{
 }
 
 body{
-  font-family:Arial, Helvetica, sans-serif;
-  background:#080012;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#090014;
   color:white;
   overflow-x:hidden;
 }
@@ -31,17 +31,18 @@ section{
   text-align:center;
   padding:30px 20px;
   position:relative;
+  overflow:hidden;
 }
 
-/* BACKGROUND */
+/* Background */
 .bg{
   position:fixed;
   inset:0;
   z-index:-2;
   background:
-    radial-gradient(circle at 20% 20%, #ff3cac33, transparent 30%),
-    radial-gradient(circle at 80% 70%, #784ba033, transparent 30%),
-    linear-gradient(135deg,#080012,#16002d,#080012);
+    radial-gradient(circle at 20% 20%,#6a0dad55,transparent 30%),
+    radial-gradient(circle at 80% 80%,#ff149355,transparent 30%),
+    linear-gradient(135deg,#090014,#21002f,#090014);
 }
 
 .stars{
@@ -53,192 +54,182 @@ section{
 
 .star{
   position:absolute;
-  width:3px;
-  height:3px;
+  width:4px;
+  height:4px;
   background:white;
   border-radius:50%;
+  opacity:.8;
   animation:twinkle 2s infinite alternate;
 }
 
 @keyframes twinkle{
   from{opacity:.2;transform:scale(.7)}
-  to{opacity:1;transform:scale(1.4)}
+  to{opacity:1;transform:scale(1.3)}
 }
 
-/* OPENING */
-#home{
-  flex-direction:column;
-}
-
-.small{
-  color:#ffc9e9;
-  letter-spacing:3px;
-  font-size:14px;
-  margin-bottom:20px;
-}
-
-h1{
-  font-size:clamp(42px,10vw,90px);
-  line-height:1;
-  background:linear-gradient(90deg,#fff,#ff9bd6,#fff);
-  -webkit-background-clip:text;
-  color:transparent;
-  animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
-  from{filter:drop-shadow(0 0 5px #ff4fb3)}
-  to{filter:drop-shadow(0 0 25px #ff4fb3)}
-}
-
-.subtitle{
-  margin:25px 0;
-  font-size:18px;
-  color:#ddd;
-}
-
-.btn{
-  border:0;
-  padding:15px 28px;
-  border-radius:50px;
-  background:linear-gradient(90deg,#ff3cac,#784ba0);
-  color:white;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-  box-shadow:0 0 25px #ff3cac66;
-  transition:.3s;
-}
-
-.btn:hover{
-  transform:scale(1.06);
-  box-shadow:0 0 40px #ff3cacaa;
-}
-
-.music{
-  position:fixed;
-  right:18px;
-  top:18px;
-  z-index:100;
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  border:1px solid #ffffff33;
-  background:#ffffff15;
-  color:white;
-  cursor:pointer;
-  backdrop-filter:blur(10px);
-}
-
-/* CONTENT */
-.container{
-  width:min(900px,100%);
-}
-
-.section-title{
-  font-size:42px;
-  margin-bottom:15px;
-}
-
+/* Opening */
 .card{
-  background:#ffffff0d;
-  border:1px solid #ffffff1c;
-  border-radius:25px;
-  padding:30px;
-  backdrop-filter:blur(15px);
-  box-shadow:0 20px 60px #0005;
-}
-
-/* LOVE */
-.message{
-  font-size:18px;
-  line-height:1.9;
-  color:#eee;
-}
-
-/* PHOTOS */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-  margin-top:25px;
-}
-
-.photo{
-  height:220px;
-  border-radius:20px;
-  overflow:hidden;
-  background:linear-gradient(135deg,#ff3cac55,#784ba055);
-  border:1px solid #ffffff22;
-}
-
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* GIFT */
-.gift{
-  font-size:110px;
-  cursor:pointer;
-  animation:bounce 1.5s infinite;
-  user-select:none;
-}
-
-@keyframes bounce{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-15px)}
-}
-
-.hidden{
-  display:none;
-}
-
-.surprise{
-  margin-top:25px;
-  animation:appear .8s ease;
+  width:min(650px,95%);
+  padding:40px 25px;
+  border-radius:30px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.2);
+  backdrop-filter:blur(12px);
+  box-shadow:0 20px 60px #0008;
+  animation:appear 1.2s ease;
 }
 
 @keyframes appear{
-  from{opacity:0;transform:scale(.7)}
-  to{opacity:1;transform:scale(1)}
+  from{opacity:0;transform:translateY(40px) scale(.95)}
+  to{opacity:1;transform:none}
 }
 
-.big-heart{
+.emoji{
   font-size:70px;
-  animation:heartbeat 1s infinite;
+  animation:bounce 1.5s infinite;
 }
 
-@keyframes heartbeat{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.2)}
+@keyframes bounce{
+  50%{transform:translateY(-12px)}
 }
 
-/* FLOATING HEARTS */
-.heart{
-  position:fixed;
-  bottom:-30px;
+h1{
+  font-size:clamp(38px,10vw,72px);
+  margin:15px 0;
+  background:linear-gradient(90deg,#fff,#ff75c8,#fff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.subtitle{
   font-size:20px;
-  animation:floatUp linear forwards;
-  pointer-events:none;
-  z-index:50;
+  line-height:1.6;
+  color:#eee;
+  margin:15px 0 30px;
 }
 
-@keyframes floatUp{
-  to{
-    transform:translateY(-110vh) rotate(360deg);
-    opacity:0;
-  }
+button{
+  border:none;
+  padding:16px 28px;
+  border-radius:50px;
+  font-size:17px;
+  font-weight:bold;
+  color:white;
+  background:linear-gradient(90deg,#ff1493,#8a2be2);
+  box-shadow:0 8px 25px #ff149355;
+  cursor:pointer;
+  transition:.3s;
 }
 
-/* CONFETTI */
+button:hover{
+  transform:scale(1.05);
+}
+
+/* Main sections */
+.content{
+  width:min(850px,95%);
+}
+
+.title{
+  font-size:clamp(38px,8vw,62px);
+  margin-bottom:25px;
+}
+
+.message{
+  font-size:20px;
+  line-height:1.9;
+  color:#eee;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:25px;
+  padding:30px;
+  box-shadow:0 15px 50px #0006;
+}
+
+/* Special boxes */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:30px;
+}
+
+.box{
+  padding:25px 15px;
+  border-radius:22px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  transition:.3s;
+}
+
+.box:hover{
+  transform:translateY(-8px);
+  background:rgba(255,255,255,.13);
+}
+
+.box span{
+  font-size:42px;
+  display:block;
+  margin-bottom:12px;
+}
+
+.box h3{
+  margin-bottom:8px;
+}
+
+.box p{
+  color:#ddd;
+  line-height:1.5;
+}
+
+/* Surprise */
+.gift{
+  font-size:100px;
+  cursor:pointer;
+  animation:gift 1.3s infinite;
+  margin:20px;
+}
+
+@keyframes gift{
+  50%{transform:scale(1.1) rotate(3deg)}
+}
+
+/* Final */
+.final h2{
+  font-size:clamp(45px,10vw,80px);
+}
+
+.final p{
+  font-size:22px;
+  line-height:1.7;
+  margin:20px auto 30px;
+  max-width:700px;
+}
+
+.signature{
+  font-size:20px;
+  color:#ffb6df;
+}
+
+/* Scroll hint */
+.scroll{
+  margin-top:25px;
+  color:#ccc;
+  font-size:14px;
+  animation:updown 1.5s infinite;
+}
+
+@keyframes updown{
+  50%{transform:translateY(8px)}
+}
+
+/* Confetti */
 .confetti{
   position:fixed;
   top:-20px;
-  width:8px;
+  width:9px;
   height:14px;
-  z-index:999;
+  z-index:9999;
   animation:fall linear forwards;
 }
 
@@ -249,29 +240,36 @@ h1{
   }
 }
 
-/* FOOTER */
-footer{
-  padding:40px 20px;
-  text-align:center;
-  color:#aaa;
-  background:#050009;
-}
-
-@media(max-width:600px){
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  .photo{
-    height:260px;
+/* Mobile */
+@media(max-width:650px){
+  section{
+    padding:25px 15px;
   }
 
   .card{
-    padding:22px;
+    padding:32px 18px;
+  }
+
+  .emoji{
+    font-size:60px;
+  }
+
+  .subtitle{
+    font-size:17px;
   }
 
   .message{
-    font-size:16px;
+    font-size:17px;
+    line-height:1.75;
+    padding:22px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .gift{
+    font-size:85px;
   }
 }
 </style>
@@ -282,201 +280,197 @@ footer{
 <div class="bg"></div>
 <div class="stars" id="stars"></div>
 
-<!-- MUSIC -->
+<!-- MUSIC
+     Upload your permitted audio file as "music.mp3"
+-->
 <audio id="music" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<button class="music" onclick="toggleMusic()" id="musicBtn">🎵</button>
 
-<!-- HOME -->
+<!-- OPENING -->
 <section id="home">
 
-  <div class="small">A LITTLE SURPRISE FOR YOU ✨</div>
+  <div class="card">
 
-  <h1>Mansi Didi ❤️</h1>
+    <div class="emoji">🎂</div>
 
-  <p class="subtitle">
-    Someone very special deserves a very special birthday.
-  </p>
+    <h1>Happy Birthday!</h1>
 
-  <button class="btn" onclick="startExperience()">
-    🎁 Open Your Surprise
-  </button>
+    <div class="subtitle">
+      Mansi Didi ❤️
+      <br>
+      A small digital surprise made specially for you ✨
+    </div>
+
+    <button onclick="startExperience()">
+      Open Your Surprise 🎁
+    </button>
+
+    <div class="scroll">
+      Tap the button to begin ↓
+    </div>
+
+  </div>
 
 </section>
 
-<!-- BIRTHDAY -->
+
+<!-- BIRTHDAY MESSAGE -->
 <section id="birthday">
 
-  <div class="container">
+  <div class="content">
 
-    <div class="card">
+    <div style="font-size:65px">🎉</div>
 
-      <div class="big-heart">❤️</div>
-
-      <h2 class="section-title">
-        Happy Birthday! 🎂
-      </h2>
-
-      <p class="subtitle">
-        To the most special Mansi Didi ✨
-      </p>
-
-      <button class="btn" onclick="celebrate()">
-        🎆 Celebrate!
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- MESSAGE -->
-<section>
-
-  <div class="container">
-
-    <h2 class="section-title">A Few Words For You 💌</h2>
-
-    <div class="card">
-
-      <p class="message">
-        Mera uske liye love sirf ek feeling nahi, balki care, respect aur
-        countless memories ka naam hai. ❤️ Uski smile mujhe genuinely khush
-        karti hai aur uski happiness mere liye bahut matter karti hai.
-        Hamare beech nok-jhok hoti hai, kabhi misunderstandings bhi hoti hain,
-        lekin dil mein uske liye respect aur care hamesha rehti hai.
-        Main perfect nahi hoon, kabhi overthink karta hoon aur kabhi emotions
-        zyada express kar deta hoon, but my feelings are always genuine.
-        Main bas chahta hoon ki woh hamesha khush rahe, apne dreams achieve
-        kare aur life mein har woh happiness paaye jo woh deserve karti hai. ❤️
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- MEMORIES -->
-<section>
-
-  <div class="container">
-
-    <h2 class="section-title">Our Memories 📸</h2>
-
-    <p class="subtitle">
-      Some moments are too special to be forgotten.
-    </p>
-
-    <div class="gallery">
-
-      <!-- Replace these with your photos -->
-      <div class="photo">
-        <img src="photo1.jpg" alt="Memory 1">
-      </div>
-
-      <div class="photo">
-        <img src="photo2.jpg" alt="Memory 2">
-      </div>
-
-      <div class="photo">
-        <img src="photo3.jpg" alt="Memory 3">
-      </div>
-
-      <div class="photo">
-        <img src="photo4.jpg" alt="Memory 4">
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- GIFT -->
-<section>
-
-  <div class="container">
-
-    <h2 class="section-title">
-      One Last Surprise 🎁
+    <h2 class="title">
+      Happy Birthday Mansi Didi ❤️
     </h2>
 
-    <p class="subtitle">
-      Tap the gift.
-    </p>
+    <div class="message">
+
+      Aaj ka din mere liye bhi special hai,
+      kyunki aaj ek bahut important person ka birthday hai. 🥳
+
+      <br><br>
+
+      Aap meri life mein sirf ek didi nahi,
+      balki ek aisi person ho jinke saath
+      bahut saari memories, hasi-mazaak aur
+      unforgettable moments jude hue hain.
+
+      <br><br>
+
+      Bas hamesha khush rehna,
+      apne dreams ko achieve karna
+      aur life mein bahut saari happiness paana.
+
+      <br><br>
+
+      <b>Once again, Happy Birthday Mansi Didi! 🎂❤️</b>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SPECIAL SECTION -->
+<section id="special">
+
+  <div class="content">
+
+    <h2 class="title">
+      Why You're Special ✨
+    </h2>
+
+    <div class="grid">
+
+      <div class="box">
+        <span>😊</span>
+        <h3>Your Smile</h3>
+        <p>
+          Aapki smile atmosphere ko
+          automatically better bana deti hai.
+        </p>
+      </div>
+
+      <div class="box">
+        <span>🌟</span>
+        <h3>Your Personality</h3>
+        <p>
+          Aapki apni ek unique personality hai
+          jo aapko special banati hai.
+        </p>
+      </div>
+
+      <div class="box">
+        <span>💫</span>
+        <h3>Your Presence</h3>
+        <p>
+          Kuch people memories ka part nahi,
+          memories ki wajah ban jaate hain.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SURPRISE -->
+<section id="surprise">
+
+  <div class="content">
+
+    <h2 class="title">
+      One Last Surprise 🎁
+    </h2>
 
     <div class="gift" onclick="openGift()">
       🎁
     </div>
 
-    <div class="surprise hidden" id="surprise">
-
-      <div class="card">
-
-        <div class="big-heart">💖</div>
-
-        <h2>
-          You Deserve All The Happiness! ✨
-        </h2>
-
-        <p class="subtitle">
-          May your smile always stay this beautiful,
-          your dreams become reality,
-          and your life be filled with happiness.
-        </p>
-
-      </div>
-
-    </div>
+    <p id="giftText" style="font-size:20px;color:#ddd;">
+      Gift ko tap karo 👆
+    </p>
 
   </div>
 
 </section>
+
 
 <!-- FINAL -->
-<section>
+<section id="final" class="final">
 
-  <div class="container">
+  <div class="content">
 
-    <div class="card">
-
-      <div class="big-heart">❤️</div>
-
-      <h1 style="font-size:clamp(35px,8vw,70px)">
-        Happy Birthday
-        <br>
-        Mansi Didi!
-      </h1>
-
-      <p class="subtitle">
-        Stay happy. Stay blessed. Keep smiling. 🌸
-      </p>
-
-      <button class="btn" onclick="celebrate()">
-        ❤️ Once Again!
-      </button>
-
+    <div style="font-size:75px">
+      🎂✨🎉
     </div>
+
+    <h2>
+      HAPPY BIRTHDAY
+    </h2>
+
+    <h2 style="color:#ff8bd5">
+      MANSI DIDI ❤️
+    </h2>
+
+    <p>
+      May your life always be filled with
+      happiness, success, laughter and
+      beautiful moments.
+
+      <br><br>
+
+      Keep smiling and keep shining! ✨
+    </p>
+
+    <div class="signature">
+      Made with ❤️ by Aditya
+    </div>
+
+    <br>
+
+    <button onclick="celebrate()">
+      Celebrate Again 🎉
+    </button>
 
   </div>
 
 </section>
-
-<footer>
-  Made with ❤️ especially for Mansi Didi
-</footer>
 
 
 <script>
 
-/* STARS */
+/* Create stars */
 const stars = document.getElementById("stars");
 
-for(let i=0;i<100;i++){
+for(let i=0;i<90;i++){
 
   const star=document.createElement("div");
 
@@ -484,118 +478,90 @@ for(let i=0;i<100;i++){
 
   star.style.left=Math.random()*100+"%";
   star.style.top=Math.random()*100+"%";
-  star.style.animationDelay=Math.random()*2+"s";
+
+  star.style.animationDelay=(Math.random()*2)+"s";
 
   stars.appendChild(star);
 }
 
 
-/* START EXPERIENCE */
+/* Start experience */
 function startExperience(){
 
+  /* Try to start music after user interaction */
   const music=document.getElementById("music");
 
   music.play().catch(()=>{});
 
-  document.getElementById("birthday")
-    .scrollIntoView({behavior:"smooth"});
-
+  /* Celebrate */
   celebrate();
+
+  /* Automatically slide to birthday section */
+  setTimeout(()=>{
+
+    document.getElementById("birthday")
+      .scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+
+  },400);
+
 }
 
 
-/* MUSIC */
-function toggleMusic(){
-
-  const music=document.getElementById("music");
-  const btn=document.getElementById("musicBtn");
-
-  if(music.paused){
-
-    music.play();
-    btn.textContent="🔊";
-
-  }else{
-
-    music.pause();
-    btn.textContent="🎵";
-
-  }
-}
-
-
-/* CONFETTI */
-function celebrate(){
-
-  for(let i=0;i<120;i++){
-
-    const piece=document.createElement("div");
-
-    piece.className="confetti";
-
-    piece.style.left=Math.random()*100+"vw";
-    piece.style.animationDuration=(2+Math.random()*3)+"s";
-    piece.style.transform=
-      "rotate("+Math.random()*360+"deg)";
-
-    piece.style.background=
-      `hsl(${Math.random()*360},100%,70%)`;
-
-    document.body.appendChild(piece);
-
-    setTimeout(()=>{
-      piece.remove();
-    },5000);
-  }
-
-  createHearts();
-}
-
-
-/* HEARTS */
-function createHearts(){
-
-  for(let i=0;i<25;i++){
-
-    const heart=document.createElement("div");
-
-    heart.className="heart";
-
-    heart.textContent=
-      ["❤️","💖","💕","💗","✨"][Math.floor(Math.random()*5)];
-
-    heart.style.left=Math.random()*100+"vw";
-
-    heart.style.animationDuration=
-      (4+Math.random()*4)+"s";
-
-    document.body.appendChild(heart);
-
-    setTimeout(()=>{
-      heart.remove();
-    },8000);
-
-  }
-}
-
-
-/* GIFT */
+/* Gift */
 function openGift(){
 
-  const surprise=document.getElementById("surprise");
+  const text=document.getElementById("giftText");
 
-  surprise.classList.remove("hidden");
+  text.innerHTML=
+    "🎉 Surprise! 🎉<br><br>" +
+    "Aap hamesha khush raho, " +
+    "healthy raho aur apni life mein " +
+    "bahut success achieve karo! ❤️";
 
   celebrate();
 
   setTimeout(()=>{
 
-    surprise.scrollIntoView({
-      behavior:"smooth",
-      block:"center"
-    });
+    document.getElementById("final")
+      .scrollIntoView({
+        behavior:"smooth"
+      });
 
-  },300);
+  },1800);
+
+}
+
+
+/* Confetti */
+function celebrate(){
+
+  for(let i=0;i<100;i++){
+
+    const c=document.createElement("div");
+
+    c.className="confetti";
+
+    c.style.left=Math.random()*100+"vw";
+
+    c.style.background=
+      `hsl(${Math.random()*360},100%,70%)`;
+
+    c.style.animationDuration=
+      (2+Math.random()*3)+"s";
+
+    c.style.transform=
+      `rotate(${Math.random()*360}deg)`;
+
+    document.body.appendChild(c);
+
+    setTimeout(()=>{
+      c.remove();
+    },5500);
+
+  }
 
 }
 

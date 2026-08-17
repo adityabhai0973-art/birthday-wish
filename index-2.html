@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mansi Didi ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#08000f;color:#fff;overflow-x:hidden
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(circle at 15% 20%,#ff3cac44,transparent 30%),
+    radial-gradient(circle at 85% 80%,#7b2cff44,transparent 30%),
+    linear-gradient(135deg,#08000f,#18002b,#08000f)
+}
+#stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;animation:twinkle 1.8s infinite alternate}
+@keyframes twinkle{from{opacity:.15;transform:scale(.6)}to{opacity:1;transform:scale(1.3)}}
+
+section{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:28px 18px;text-align:center
+}
+.wrap{width:min(760px,100%)}
+.card{
+  background:#ffffff0d;border:1px solid #ffffff22;border-radius:30px;
+  padding:38px 24px;backdrop-filter:blur(14px);
+  box-shadow:0 25px 80px #0008
+}
+.emoji{font-size:75px;animation:float 1.5s infinite ease-in-out}
+@keyframes float{50%{transform:translateY(-12px)}}
+h1{
+  font-size:clamp(42px,10vw,78px);margin:15px 0;
+  background:linear-gradient(90deg,#fff,#ff8bd8,#fff);
+  -webkit-background-clip:text;color:transparent
+}
+h2{font-size:clamp(34px,8vw,58px);margin-bottom:22px}
+p{line-height:1.8;color:#eee;font-size:18px}
+.btn{
+  margin-top:25px;padding:15px 28px;border:0;border-radius:999px;
+  color:#fff;background:linear-gradient(90deg,#ff1493,#8a2be2);
+  font-size:16px;font-weight:700;cursor:pointer;
+  box-shadow:0 10px 30px #ff149355;transition:.25s
+}
+.btn:active{transform:scale(.96)}
+.hint{margin-top:18px;color:#bbb;font-size:14px}
+.message{font-size:18px;text-align:left}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
+.point{
+  padding:22px 12px;border-radius:22px;background:#ffffff0b;
+  border:1px solid #ffffff18
+}
+.point b{display:block;margin:10px 0 6px}
+.point span{font-size:38px}
+.gift{font-size:105px;cursor:pointer;animation:shake 1.3s infinite}
+@keyframes shake{
+  0%,100%{transform:rotate(0)}
+  25%{transform:rotate(-5deg)}
+  75%{transform:rotate(5deg)}
+}
+#giftMessage{margin-top:20px;min-height:55px}
+.final-heart{font-size:80px;animation:heart 1s infinite}
+@keyframes heart{50%{transform:scale(1.18)}}
+.confetti{
+  position:fixed;top:-20px;width:8px;height:14px;z-index:9999;
+  animation:fall 4s linear forwards
+}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+footer{text-align:center;padding:30px;color:#aaa}
+@media(max-width:600px){
+  .card{padding:30px 18px}.points{grid-template-columns:1fr}
+  p,.message{font-size:16px}.gift{font-size:85px}
+}
+</style>
+</head>
+<body>
+
+<div id="stars"></div>
+
+<audio id="music" loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<section id="home">
+  <div class="wrap">
+    <div class="card">
+      <div class="emoji">🎂</div>
+      <h1>Happy Birthday!</h1>
+      <p>
+        A small surprise made specially for<br>
+        <strong>Mansi Didi ❤️</strong>
+      </p>
+      <button class="btn" onclick="begin()">🎁 Open Your Surprise</button>
+      <div class="hint">Tap once to begin ✨</div>
+    </div>
+  </div>
+</section>
+
+<section id="birthday">
+  <div class="wrap">
+    <div class="card">
+      <div style="font-size:60px">🎉</div>
+      <h2>Happy Birthday<br>Mansi Didi ❤️</h2>
+      <p>
+        Aaj ka din special hai kyunki aaj ek bahut important
+        person ka birthday hai. Bas hamesha khush rehna,
+        smile karti rehna aur apne saare dreams achieve karna.
+      </p>
+      <button class="btn" onclick="goTo('message')">Next 💌</button>
+    </div>
+  </div>
+</section>
+
+<section id="message">
+  <div class="wrap">
+    <h2>Something From My Heart 💌</h2>
+    <div class="card">
+      <p class="message">
+        Mera uske liye love sirf ek feeling nahi, balki care, respect aur
+        countless memories ka naam hai. ❤️ Uski smile mujhe genuinely khush
+        karti hai aur uski happiness mere liye bahut matter karti hai.
+        Hamare beech nok-jhok hoti hai, kabhi misunderstandings bhi hoti hain,
+        lekin dil mein uske liye respect aur care hamesha rehti hai.
+        Main perfect nahi hoon, kabhi overthink karta hoon aur kabhi emotions
+        zyada express kar deta hoon, but my feelings are always genuine.
+        Main bas chahta hoon ki woh hamesha khush rahe, apne dreams achieve
+        kare aur life mein har woh happiness paaye jo woh deserve karti hai. ❤️
+      </p>
+      <button class="btn" onclick="goTo('special')">Continue ✨</button>
+    </div>
+  </div>
+</section>
+
+<section id="special">
+  <div class="wrap">
+    <h2>Why You're Special ✨</h2>
+    <div class="points">
+      <div class="point"><span>😊</span><b>Your Smile</b><p>Ek smile hi mood better kar deti hai.</p></div>
+      <div class="point"><span>🌟</span><b>Your Vibe</b><p>Apni unique personality ki wajah se special ho.</p></div>
+      <div class="point"><span>💖</span><b>Your Presence</b><p>Kuch log memories ka beautiful part ban jaate hain.</p></div>
+    </div>
+    <button class="btn" onclick="goTo('gift')">One More Surprise 🎁</button>
+  </div>
+</section>
+
+<section id="gift">
+  <div class="wrap">
+    <h2>Open The Gift 🎁</h2>
+    <div class="gift" onclick="openGift()">🎁</div>
+    <p id="giftMessage">Tap the gift 👆</p>
+  </div>
+</section>
+
+<section id="final">
+  <div class="wrap">
+    <div class="card">
+      <div class="final-heart">❤️</div>
+      <h1>Happy Birthday</h1>
+      <h2 style="color:#ff91d3">Mansi Didi!</h2>
+      <p>
+        May your life always be filled with happiness, success,
+        laughter and beautiful memories. ✨
+        <br><br>
+        Keep smiling and keep shining! 🌸
+      </p>
+      <button class="btn" onclick="celebrate()">🎆 Celebrate Again</button>
+      <p style="margin-top:25px;color:#ffb6df;font-size:15px">
+        Made with ❤️ by Aditya
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>© Birthday Surprise • Made with ❤️</footer>
+
+<script>
+const stars=document.getElementById("stars");
+for(let i=0;i<90;i++){
+  const s=document.createElement("div");
+  s.className="star";
+  s.style.left=Math.random()*100+"%";
+  s.style.top=Math.random()*100+"%";
+  s.style.animationDelay=Math.random()*2+"s";
+  stars.appendChild(s);
+}
+
+function goTo(id){
+  document.getElementById(id).scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+}
+
+function begin(){
+  const music=document.getElementById("music");
+  music.play().catch(()=>{});
+  celebrate();
+  setTimeout(()=>goTo("birthday"),350);
+}
+
+function openGift(){
+  document.getElementById("giftMessage").innerHTML=
+    "🎉 Surprise! 🎉<br><br>"+
+    "Hamesha khush raho, apne dreams achieve karo "+
+    "aur life mein bahut saari happiness pao. ❤️";
+  celebrate();
+  setTimeout(()=>goTo("final"),1800);
+}
+
+function celebrate(){
+  for(let i=0;i<100;i++){
+    const c=document.createElement("div");
+    c.className="confetti";
+    c.style.left=Math.random()*100+"vw";
+    c.style.background=`hsl(${Math.random()*360},100%,70%)`;
+    c.style.animationDuration=(2+Math.random()*3)+"s";
+    c.style.transform=`rotate(${Math.random()*360}deg)`;
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),5500);
+  }
+}
+</script>
+</body>
+</html>

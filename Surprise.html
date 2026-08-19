@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Book For Mansi ❤️</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+}
+
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  background:#08040c;
+  color:#f8e9d0;
+  overflow-x:hidden;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  background:
+    radial-gradient(circle at 20% 20%,#8b5a2b22,transparent 30%),
+    radial-gradient(circle at 80% 70%,#d4af3722,transparent 30%),
+    linear-gradient(135deg,#08040c,#160d12,#08040c);
+}
+
+.stars{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+}
+
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:#fff;
+  border-radius:50%;
+  opacity:.6;
+  animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+  from{opacity:.15}
+  to{opacity:1}
+}
+
+/* ---------- INTRO ---------- */
+
+#intro{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:25px;
+}
+
+.introBox{
+  max-width:650px;
+}
+
+.introBox .small{
+  letter-spacing:5px;
+  font-size:12px;
+  color:#c9a96e;
+  margin-bottom:25px;
+}
+
+.introBox h1{
+  font-size:clamp(45px,10vw,80px);
+  font-weight:normal;
+  margin-bottom:20px;
+}
+
+.introBox p{
+  color:#cfc0aa;
+  line-height:1.8;
+  font-size:17px;
+}
+
+.openBtn{
+  margin-top:35px;
+  padding:15px 32px;
+  border:1px solid #c9a96e;
+  background:transparent;
+  color:#e8cc91;
+  border-radius:5px;
+  font-family:inherit;
+  font-size:16px;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.openBtn:hover{
+  background:#c9a96e;
+  color:#160d12;
+  box-shadow:0 0 30px #c9a96e55;
+}
+
+/* ---------- BOOK ---------- */
+
+#bookSection{
+  min-height:100vh;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:40px 15px;
+}
+
+.book{
+  width:min(900px,95vw);
+  min-height:560px;
+  position:relative;
+  perspective:1800px;
+}
+
+.page{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,#e3cfa5,#f5e5bd 8%,#f8e8c2 92%,#d4bb87);
+  color:#332415;
+  border-radius:4px 15px 15px 4px;
+  padding:55px 45px;
+  box-shadow:
+    0 20px 70px #000b,
+    inset 0 0 30px #76552b22;
+  transform-origin:left center;
+  transition:transform 1s cubic-bezier(.77,0,.18,1);
+  backface-visibility:hidden;
+  overflow:hidden;
+}
+
+.page::after{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid #75552855;
+  pointer-events:none;
+}
+
+.page.active{
+  transform:rotateY(0deg);
+  z-index:10;
+}
+
+.page.flipped{
+  transform:rotateY(-180deg);
+  z-index:1;
+}
+
+.page h2{
+  font-size:clamp(30px,6vw,52px);
+  font-weight:normal;
+  text-align:center;
+  margin:45px 0 25px;
+}
+
+.page h3{
+  text-align:center;
+  font-size:22px;
+  margin-bottom:25px;
+  color:#725225;
+}
+
+.page p{
+  max-width:650px;
+  margin:auto;
+  font-size:18px;
+  line-height:2;
+  text-align:center;
+}
+
+.pageNumber{
+  position:absolute;
+  bottom:25px;
+  left:0;
+  right:0;
+  text-align:center;
+  color:#795a30;
+  font-size:13px;
+}
+
+.nextBtn{
+  position:absolute;
+  bottom:45px;
+  right:45px;
+  border:1px solid #765528;
+  background:#332415;
+  color:#f3ddb1;
+  padding:11px 20px;
+  border-radius:4px;
+  font-family:inherit;
+  cursor:pointer;
+  z-index:20;
+}
+
+.backBtn{
+  position:absolute;
+  bottom:45px;
+  left:45px;
+  border:1px solid #765528;
+  background:transparent;
+  color:#332415;
+  padding:11px 20px;
+  border-radius:4px;
+  font-family:inherit;
+  cursor:pointer;
+  z-index:20;
+}
+
+/* ---------- COVER ---------- */
+
+.cover{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  background:
+    radial-gradient(circle,#56391c,#24160e 70%);
+  color:#e8cc91;
+  border:2px solid #9b783e;
+}
+
+.cover h2{
+  font-size:clamp(38px,8vw,65px);
+  margin:10px 0;
+}
+
+.cover .ornament{
+  font-size:55px;
+  margin-bottom:20px;
+}
+
+/* ---------- FINAL ---------- */
+
+.finalTitle{
+  color:#7c3c27;
+}
+
+.finalHeart{
+  font-size:75px;
+  text-align:center;
+  animation:heart 1.2s infinite;
+}
+
+@keyframes heart{
+  50%{
+    transform:scale(1.15);
+  }
+}
+
+/* ---------- CONFETTI ---------- */
+
+.confetti{
+  position:fixed;
+  top:-20px;
+  width:8px;
+  height:14px;
+  z-index:9999;
+  animation:fall 4s linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:600px){
+
+  .book{
+    min-height:620px;
+  }
+
+  .page{
+    padding:40px 25px;
+  }
+
+  .page p{
+    font-size:16px;
+    line-height:1.8;
+  }
+
+  .nextBtn{
+    right:25px;
+    bottom:30px;
+  }
+
+  .backBtn{
+    left:25px;
+    bottom:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<!-- ================= INTRO ================= -->
+
+<section id="intro">
+
+  <div class="introBox">
+
+    <div class="small">
+      A PRIVATE LITTLE SURPRISE
+    </div>
+
+    <h1>For Mansi ❤️</h1>
+
+    <p>
+      Some memories deserve photographs.<br>
+      Some feelings deserve words.<br>
+      And some people deserve their own story.
+    </p>
+
+    <button class="openBtn" onclick="openBook()">
+      Open The Book ✨
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BOOK ================= -->
+
+<section id="bookSection">
+
+<div class="book">
+
+
+<!-- PAGE 1 : COVER -->
+
+<div class="page active cover" id="page1">
+
+  <div class="ornament">✦</div>
+
+  <h2>
+    A Little Book
+  </h2>
+
+  <h3>
+    Made For Mansi Didi
+  </h3>
+
+  <p>
+    Turn the pages slowly...<br>
+    There's a little surprise waiting inside.
+  </p>
+
+  <button class="nextBtn" onclick="nextPage()">
+    Open →
+  </button>
+
+  <div class="pageNumber">
+    I
+  </div>
+
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div class="page" id="page2">
+
+  <h2>
+    Chapter One
+  </h2>
+
+  <h3>
+    The Special Day 🎂
+  </h3>
+
+  <p>
+    Today isn't just another day.
+    It's the day someone very special
+    came into this world.
+
+    <br><br>
+
+    So today, all I want to say is...
+
+    <br><br>
+
+    <strong>
+      Happy Birthday, Mansi Didi! ❤️
+    </strong>
+  </p>
+
+  <button class="backBtn" onclick="prevPage()">
+    ← Back
+  </button>
+
+  <button class="nextBtn" onclick="nextPage()">
+    Next →
+  </button>
+
+  <div class="pageNumber">
+    II
+  </div>
+
+</div>
+
+
+<!-- PAGE 3 -->
+
+<div class="page" id="page3">
+
+  <h2>
+    Chapter Two
+  </h2>
+
+  <h3>
+    A Few Words From The Heart 💌
+  </h3>
+
+  <p>
+    Mera uske liye love sirf ek feeling nahi,
+    balki care, respect aur countless memories
+    ka naam hai.
+
+    <br><br>
+
+    Uski smile mujhe genuinely khush karti hai
+    aur uski happiness mere liye bahut matter karti hai.
+
+    <br><br>
+
+    Hamare beech nok-jhok hoti hai,
+    misunderstandings bhi hoti hain,
+    lekin dil mein care aur respect hamesha rehti hai.
+
+  </p>
+
+  <button class="backBtn" onclick="prevPage()">
+    ← Back
+  </button>
+
+  <button class="nextBtn" onclick="nextPage()">
+    Next →
+  </button>
+
+  <div class="pageNumber">
+    III
+  </div>
+
+</div>
+
+
+<!-- PAGE 4 -->
+
+<div class="page" id="page4">
+
+  <h2>
+    Chapter Three
+  </h2>
+
+  <h3>
+    One Wish ✨
+  </h3>
+
+  <p>
+    I hope your life is always filled
+    with happiness, success and beautiful moments.
+
+    <br><br>
+
+    May every dream you have
+    slowly become reality.
+
+    <br><br>
+
+    May you always have reasons to smile.
+
+    <br><br>
+
+    And whenever life gets difficult,
+    I hope you remember how special
+    you really are.
+
+  </p>
+
+  <button class="backBtn" onclick="prevPage()">
+    ← Back
+  </button>
+
+  <button class="nextBtn" onclick="nextPage()">
+    Next →
+  </button>
+
+  <div class="pageNumber">
+    IV
+  </div>
+
+</div>
+
+
+<!-- PAGE 5 -->
+
+<div class="page" id="page5">
+
+  <h2>
+    The Last Page...
+  </h2>
+
+  <div class="finalHeart">
+    ❤️
+  </div>
+
+  <p>
+    And now...
+
+    <br><br>
+
+    The most important words
+    of this little book:
+  </p>
+
+  <h2 class="finalTitle">
+    HAPPY BIRTHDAY
+    <br>
+    MANSI DIDI! 🎂
+  </h2>
+
+  <p>
+    Stay happy.
+    Stay blessed.
+    Keep smiling.
+  </p>
+
+  <button class="backBtn" onclick="prevPage()">
+    ← Back
+  </button>
+
+  <button class="nextBtn" onclick="celebrate()">
+    Celebrate 🎉
+  </button>
+
+  <div class="pageNumber">
+    V
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+/* ================= STARS ================= */
+
+const stars =
+document.getElementById("stars");
+
+for(let i=0;i<100;i++){
+
+  const star =
+  document.createElement("div");
+
+  star.className="star";
+
+  star.style.left =
+  Math.random()*100+"%";
+
+  star.style.top =
+  Math.random()*100+"%";
+
+  star.style.animationDelay =
+  Math.random()*2+"s";
+
+  stars.appendChild(star);
+}
+
+
+/* ================= BOOK ================= */
+
+let currentPage=1;
+
+const totalPages=5;
+
+
+function openBook(){
+
+  document.getElementById("intro").style.display="none";
+
+  const book=
+  document.getElementById("bookSection");
+
+  book.style.display="flex";
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+
+function nextPage(){
+
+  if(currentPage>=totalPages){
+
+    celebrate();
+
+    return;
+  }
+
+  const current=
+  document.getElementById(
+    "page"+currentPage
+  );
+
+  current.classList.remove("active");
+
+  current.classList.add("flipped");
+
+  currentPage++;
+
+  const next=
+  document.getElementById(
+    "page"+currentPage
+  );
+
+  next.classList.add("active");
+
+}
+
+
+function prevPage(){
+
+  if(currentPage<=1){
+    return;
+  }
+
+  const current=
+  document.getElementById(
+    "page"+currentPage
+  );
+
+  current.classList.remove("active");
+
+  currentPage--;
+
+  const previous=
+  document.getElementById(
+    "page"+currentPage
+  );
+
+  previous.classList.remove("flipped");
+
+  previous.classList.add("active");
+
+}
+
+
+/* ================= CONFETTI ================= */
+
+function celebrate(){
+
+  for(let i=0;i<120;i++){
+
+    const piece=
+    document.createElement("div");
+
+    piece.className="confetti";
+
+    piece.style.left=
+    Math.random()*100+"vw";
+
+    piece.style.background=
+    `hsl(${Math.random()*360},80%,65%)`;
+
+    piece.style.animationDuration=
+    (2+Math.random()*3)+"s";
+
+    document.body.appendChild(piece);
+
+    setTimeout(()=>{
+      piece.remove();
+    },5500);
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
